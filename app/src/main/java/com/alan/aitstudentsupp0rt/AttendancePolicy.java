@@ -22,7 +22,7 @@ public class AttendancePolicy {
         totalLimit = 0;
         physicalLimit = 0;
         PLlimit = 0;
-        
+
     }
 
 
