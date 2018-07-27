@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AITstudentsupp0rt</string>
+    <string name="name">enter your name</string>
+    <string name="timeTable">update timeTable</string>
+    <string name="attendance">manage attendance</string>
+    <string name="setting">user settings</string>
+    <string name="next">next</string>
+    <string name="alter">alter attendace policy</string>
+</resources>
