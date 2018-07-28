@@ -26,11 +26,12 @@ public class open extends AppCompatActivity {
             rep=(EditText)findViewById(R.id.editText);
             message = (TextView) findViewById(R.id.textView);
             db=this.openOrCreateDatabase("AITstudent",MODE_PRIVATE,null);
-            db.execSQL("CREATE TABLE IF NOT EXISTS users(name VARCHAR,passordBool INT(1) DEFAULT 0,password varchar ,logtime timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL)");
+            db.execSQL("CREATE TABLE IF NOT EXISTS users(name VARCHAR,passordBool INT(1) DEFAULT 0,password varchar )");
             try{
                 c = db.rawQuery("Select * from users",null);
-                if(c!=null) {
-                    c.moveToFirst();
+                if(c.getCount()>0) {
+                    Log.i("GG", "enter cursor not null ");
+                    c.moveToLast();
                     int nameindex=c.getColumnIndex("name");
                     String name=c.getString(nameindex);
                     message.setText("hi "+name);
@@ -60,7 +61,7 @@ public class open extends AppCompatActivity {
         Intent b;
         switch (choice){
             case 1:
-                Toast.makeText(this , "already in database" , Toast.LENGTH_LONG).show();
+                Toast.makeText(this , "already in database" , Toast.LENGTH_SHORT).show();
                 b=new Intent(com.alan.aitstudentsupp0rt.open.this,home_page.class);
                 startActivity(b);
                 break;
@@ -77,7 +78,7 @@ public class open extends AppCompatActivity {
                 break;
             case 4:
 
-                Toast.makeText(this , "added to database" , Toast.LENGTH_LONG).show();
+                Toast.makeText(this , "added to database" , Toast.LENGTH_SHORT).show();
                 b=new Intent(com.alan.aitstudentsupp0rt.open.this,alterAttendace.class);
                 startActivity(b);
                 break;
