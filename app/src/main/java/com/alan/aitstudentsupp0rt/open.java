@@ -61,7 +61,7 @@ public class open extends AppCompatActivity {
         switch (choice){
             case 1:
                 Toast.makeText(this , "already in database" , Toast.LENGTH_LONG).show();
-                b=new Intent(com.alan.aitstudentsupp0rt.open.this,alterAttendace.class);
+                b=new Intent(com.alan.aitstudentsupp0rt.open.this,home_page.class);
                 startActivity(b);
                 break;
 
@@ -78,7 +78,7 @@ public class open extends AppCompatActivity {
             case 4:
 
                 Toast.makeText(this , "added to database" , Toast.LENGTH_LONG).show();
-                b=new Intent(com.alan.aitstudentsupp0rt.open.this,home_page.class);
+                b=new Intent(com.alan.aitstudentsupp0rt.open.this,alterAttendace.class);
                 startActivity(b);
                 break;
 
