@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".home_page" />
-        <activity android:name=".alterAttendace"></activity>
+        <activity android:name=".alterAttendace" />
+        <activity android:name=".manage"></activity>
     </application>
 
 </manifest>

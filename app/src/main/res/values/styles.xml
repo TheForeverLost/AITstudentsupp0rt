@@ -9,11 +9,11 @@
     </style>
 
     <style name="theBox" parent="@android:style/Widget.TextView">
-    <item name="android:background">@drawable/shape3</item>
+    <item name="android:background">@drawable/shape2</item>
     <item name="android:padding">2dp</item>
     <item name="android:textColor">#ffffff</item>
     <item name="android:textStyle"> italic</item>>
     <item name="android:textSize">25dp</item>
     <item name="android:textAlignment">center</item>
-    </style>>
+    </style>
 </resources>
