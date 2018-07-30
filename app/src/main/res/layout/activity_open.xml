@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape3"
+    android:background="@drawable/appdev_1"
     tools:context="com.alan.aitstudentsupp0rt.open">
 
     <android.support.v7.widget.LinearLayoutCompat

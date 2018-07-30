@@ -1,5 +1,6 @@
 package com.alan.aitstudentsupp0rt;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -115,36 +116,43 @@ public class alterAttendace extends AppCompatActivity {
         int totallimit = Integer.parseInt(edTotal.getText().toString());
         Log.i("nps", String.valueOf(totallimit));
         if(totallimit<100&&totallimit>0){
-            atp.settotalLimit(totallimit);
+            //atp.settotalLimit(totallimit);
         }else{
             flag=0;
         }
-
+        int physical;
         if(cbphy.isChecked()){
-            int physical= Integer.parseInt(edphy.getText().toString());
+            physical= Integer.parseInt(edphy.getText().toString());
             if (physical<100&&physical>0){
-                atp.setphysicalLimit(physical);
+                //atp.setphysicalLimit(physical);
             }else{
                 flag=0;
             }
+        }else{
+            physical =0;
         }
-
+        int subject;
         if(cbsub.isChecked()){
-            int subject= Integer.parseInt(edsub.getText().toString());
+            subject= Integer.parseInt(edsub.getText().toString());
             if (subject<100&&subject>0){
-                atp.setsubLimit(subject);
+                //atp.setsubLimit(subject);
             }else{
                 flag=0;
             }
+        }else{
+            subject = 0;
         }
 
+        int PLc;
         if(cbPL.isChecked()){
-            int PLc= Integer.parseInt(edPL.getText().toString());
+            PLc= Integer.parseInt(edPL.getText().toString());
             if (PLc>0){
-                atp.setPLlimit(PLc);
+                //atp.setPLlimit(PLc);
             }else{
                 flag=0;
             }
+        }else{
+            PLc=0;
         }
 
         if(flag==0){
@@ -152,8 +160,15 @@ public class alterAttendace extends AppCompatActivity {
             Toast.makeText(this,"Please input valid data" , Toast.LENGTH_SHORT).show();
 
         }else{
-            String query=atp.executeUpdate();
+            //String query=atp.executeUpdate();
+            String query="UPDATE policy SET total = "+totallimit+" , " +
+                    "subjectwise = "+subject+" , " +
+                    "physical = "+physical+" ," +
+                    "PL = "+PLc+" ";
             db.execSQL(query);
+
+            Intent b=new Intent(com.alan.aitstudentsupp0rt.alterAttendace.this,com.alan.aitstudentsupp0rt.home_page.class);
+            startActivity(b);
         }
 
     }
