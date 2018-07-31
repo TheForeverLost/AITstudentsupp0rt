@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape3"
+    android:background="@drawable/appdev_1"
     tools:context=".alterAttendace">
 
     <ImageView
@@ -18,12 +18,11 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="94dp"
+        android:layout_height="101dp"
+        android:layout_alignTop="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/appdevlogo" />
 
     <EditText
         android:id="@+id/editText2"

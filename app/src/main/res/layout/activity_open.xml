@@ -23,11 +23,13 @@
             android:layout_height="30dp"
             android:layout_centerInParent="true"
             android:text="Hi"
+            android:textColor="#FFFFFF"
             android:textSize="28sp"
             android:textAlignment="center"
 
             />
         <EditText
+            android:textColor="#FFFFFF"
             android:id="@+id/editText"
             android:layout_width="248dp"
             android:layout_height="40dp"
@@ -68,9 +70,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="212dp"
-        android:layout_height="232dp"
+        android:layout_height="212dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/appdevlogo" />
 
 </android.widget.RelativeLayout>
