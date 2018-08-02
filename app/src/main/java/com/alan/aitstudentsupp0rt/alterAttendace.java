@@ -135,7 +135,7 @@ public class alterAttendace extends AppCompatActivity {
         if(cbsub.isChecked()){
             subject= Integer.parseInt(edsub.getText().toString());
             if (subject<100&&subject>0){
-                //atp.setsubLimit(subject);
+                //atp.setsubLimit(com.alan.aitstudentsupp0rt.subject);
             }else{
                 flag=0;
             }

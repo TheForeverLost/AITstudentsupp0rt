@@ -5,31 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".manage"
-    android:background="@drawable/shape3"
+    android:background="@drawable/appdev_1"
     >
-
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="354dp"
-        android:layout_height="472dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="95dp"
-        android:divider="@android:color/transparent"
-        android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll"
-        tools:listitem="@layout/item_message"
-
-        />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="378dp"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
+        android:alpha="0.8"
         android:background="@drawable/shape3"
+
         android:text="TOTAL"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -42,4 +30,16 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="3dp"
         app:srcCompat="@android:drawable/btn_plus" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="354dp"
+        android:layout_height="447dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:divider="@android:color/transparent"
+        android:stackFromBottom="true"
+
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/item_message" />
+
 </RelativeLayout>
