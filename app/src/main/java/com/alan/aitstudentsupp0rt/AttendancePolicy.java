@@ -25,6 +25,14 @@ public class AttendancePolicy {
 
     }
 
+    public int getAttendancelimit(){
+        if(subjectwise){
+            return subLimit;
+        }else{
+            return totalLimit;
+        }
+    }
+
     protected void obtain(Cursor c){
         if(c.getCount()>0){
             c.moveToLast();
