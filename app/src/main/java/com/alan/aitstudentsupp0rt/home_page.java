@@ -23,6 +23,8 @@ public class home_page extends AppCompatActivity {
     }
 
     protected void manage(View view){
+        n=new Intent(com.alan.aitstudentsupp0rt.home_page.this,manage.class);
+        startActivity(n);
 
     }
 

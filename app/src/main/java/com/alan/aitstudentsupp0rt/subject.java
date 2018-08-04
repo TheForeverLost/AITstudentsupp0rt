@@ -1,5 +1,7 @@
 package com.alan.aitstudentsupp0rt;
 
+import java.util.ArrayList;
+
 public class subject {
     String subname;
     int total;
@@ -58,5 +60,15 @@ public class subject {
 
     void update(){
         //to add previous attendance
+    }
+
+    public static ArrayList<subject> createsubjectsList(int numContacts,AttendancePolicy attendancePolicy) {
+        ArrayList<subject> contacts = new ArrayList<subject>();
+
+        for (int i = 1; i <= numContacts; i++) {
+            contacts.add(new subject(attendancePolicy));
+        }
+
+        return contacts;
     }
 }

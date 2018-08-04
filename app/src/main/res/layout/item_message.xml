@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="Cancelled"
+                    android:text="Update"
 
                     />
 

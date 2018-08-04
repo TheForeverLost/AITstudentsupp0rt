@@ -25,6 +25,20 @@ public class AttendancePolicy {
 
     }
 
+    AttendancePolicy(SQLiteDatabase db){
+        Cursor c = c = db.rawQuery("SELECT * FROM policy",null);
+        if(c.getCount()>0){
+            c.moveToLast();
+            subLimit = c.getInt(c.getColumnIndex("subjectwise"));
+            subjectwise = subLimit != 0;
+            totalLimit = c.getInt(c.getColumnIndex("total"));
+            physicalLimit = c.getInt(c.getColumnIndex("physical"));
+            physical = physicalLimit!=0;
+            PLlimit = c.getInt(c.getColumnIndex("PL"));
+            PL=PLlimit!=0;
+        }
+    }
+
     public int getAttendancelimit(){
         if(subjectwise){
             return subLimit;
